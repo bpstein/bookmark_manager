@@ -3,6 +3,7 @@
   <head>
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <title>Bookmark Manager</title>
 
     <style>
@@ -13,15 +14,23 @@
 
   </head>
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-
-
   <body>
-    <% if current_user %>
-      Welcome, <%=current_user.email %>
-      <% end %>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <% if current_user %>
+            <p class="welcome-message">Welcome, <%=current_user.email %>!</p>
+          <% end %>
+
+            <form action='/links/new' method='get'>
+              <input type="submit" value="Add a bookmark" class="add-bookmark btn btn-medium">
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
       <%= yield %>
+    </div>
   </body>
 </html>
     

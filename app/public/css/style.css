@@ -1,0 +1,15 @@
+.btn {
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.add-bookmark {
+  float: right;
+  margin-right: 10px;
+}
+
+.welcome-message {
+  margin: 10px;
+  float: left;
+}

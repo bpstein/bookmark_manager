@@ -3,7 +3,7 @@ def add_link
   fill_in :title, with:  'eBay'
   fill_in :url, with: 'www.ebay.com'
   fill_in :tags, with: 'Shopping'
-  click_button "Submit"
+  click_button "Add!"
 end
 
 def sign_up
