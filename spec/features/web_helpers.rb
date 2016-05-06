@@ -37,3 +37,10 @@ def invalid_email_sign_up
   fill_in :password_confirmation, with: 'oranges!'
   click_button 'Sign up'
 end 
+
+def sign_in
+  visit '/sessions/new'
+  fill_in :email, with: 'valid@email.com'
+  fill_in :password, with: 'password123'
+  click_button 'Sign in'
+end
