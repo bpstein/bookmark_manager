@@ -1,10 +1,16 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <form action='/links' method='post'>
-      <p>Title: <input type="text" name="title"></p>
-      <p>URL: <input type="text" name="url"></p>
-      <p>Tag: <input type="text" name="tags"></p>
-      <input type="submit" value="Add!">
-    </form>
-  </div>
+<div class="container">
+  <form action='/links' method='post'>
+    
+    <h2>Add new bookmark</h2>
+
+    <label>Title:</label>
+    <input type="text" name="title"><br>
+
+    <label>URL:</label>
+    <input type="text" name="url"><br>
+
+    <label>Tag:</label>
+    <input type="text" name="tags"><br>
+    <input type="submit" value="Add!" class="btn btn-medium btn-primary">
+  </form>
 </div>
