@@ -26,3 +26,7 @@ label {
   margin: 10px;
   float: left;
 }
+
+#flash {
+  color: red;
+}

@@ -21,3 +21,19 @@ def bad_sign_up
   fill_in :password_confirmation, with: 'oranges'
   click_button 'Sign up'
 end
+
+def no_email_sign_up
+  visit '/users/new'
+  fill_in :email, with: ''
+  fill_in :password, with: 'oranges!'
+  fill_in :password_confirmation, with: 'oranges!'
+  click_button 'Sign up'
+end
+
+def invalid_email_sign_up
+  visit '/users/new'
+  fill_in :email, with: 'invalid@email'
+  fill_in :password, with: 'oranges!'
+  fill_in :password_confirmation, with: 'oranges!'
+  click_button 'Sign up'
+end 
