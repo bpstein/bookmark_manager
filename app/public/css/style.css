@@ -21,6 +21,11 @@ label {
   margin-right: 10px;
 }
 
+.sign-out {
+  float: right;
+  margin-right: 10px;
+}
+
 .welcome-message {
   color: royalblue;
   margin: 10px;

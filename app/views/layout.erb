@@ -12,14 +12,27 @@
     <div class="navbar nav-pills">
     <div class="navbar-inner">
       <% if current_user %>
-        <p class="welcome-message">Welcome, <%=current_user.email %>!</p>
+        <!-- <p class="welcome-message">Welcome, <%=current_user.email %>!</p> -->
       <form action='/links/new' method='get'>
         <input type="submit" value="Add a bookmark" class="add-bookmark btn btn-medium btn-primary">
+        <% if current_user %>
+          Welcome, <%= current_user.email %>
+          <form method='post' action='/sessions'>
+            <input type='hidden' name='_method' value='delete'>
+            <input type='submit' value='Sign out' class="sign-out btn btn-medium btn-primary">
+          </form>
+        <% end %>
       </form>
       <% end %>
     </div>
 
     <div class="container">
+
+      <% if flash[:notice] %>
+        <div id='notice'>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
 
       <% if flash[:errors] && !flash[:errors].empty? %>
         Please refer to the following errors below:
@@ -30,10 +43,7 @@
         </ul>
       <% end %>
 
-
       <%= yield %>
-
-
 
     </div>
     </div>

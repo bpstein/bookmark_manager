@@ -11,4 +11,9 @@
 
     <input type='submit' value='Sign in' class="btn btn-medium btn-primary">
   </form>
+
+
+  <% if flash[:sessions] %>
+    <div id='notice'><%= flash[:sessions] %></div>
+  <% end %>
 </div>
