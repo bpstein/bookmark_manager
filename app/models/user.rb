@@ -6,6 +6,7 @@ class User
   attr_accessor :password_confirmation
 
   include DataMapper::Resource
+  
 
   property :id,       Serial
   property :email,    String
